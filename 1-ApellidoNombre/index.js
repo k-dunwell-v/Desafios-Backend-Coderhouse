@@ -30,7 +30,7 @@
 		
 		let list = `Libros:`
 
-      	for (let i in this.libros) {
+    for (let i in this.libros) {
 			let book = this.libros[i]
 			let title = book["nombre"]
 			list = `${list}\n• "${title}".`
