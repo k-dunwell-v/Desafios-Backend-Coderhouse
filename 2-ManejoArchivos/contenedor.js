@@ -38,6 +38,7 @@ class Contenedor {
 			console.error(err)
 		}
 
+
 	}
 
 	//getAll(): Object[] - Devuelve un array con los objetos presentes en el archivo.
@@ -85,9 +86,5 @@ class Contenedor {
 	}
 
 }
-
-
-
-
 
 module.exports = Contenedor

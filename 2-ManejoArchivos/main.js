@@ -3,7 +3,7 @@ const Contenedor = require("./contenedor.js")
 const archivo = new Contenedor("./productos.txt")
 
 // Creé un handler para no tener que comentar las funciones que no fuese a utilizar!
-function handler(opcion, id) {
+function fileHandler(opcion, id) {
 
     switch (opcion) {
 
@@ -37,7 +37,7 @@ function handler(opcion, id) {
 }
 
 // El primer parametro es la opción del switch, el segundo es OPCIONAL, sería el "id"
-handler(2, 3)
+fileHandler(3)
 
 // 1. save()
 
@@ -48,7 +48,6 @@ handler(2, 3)
 // 4. deleteById()
 
 // 5. deleteAll()
-
 
 
 
