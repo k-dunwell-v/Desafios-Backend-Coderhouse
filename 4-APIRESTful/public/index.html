@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Productos</title>
+    </head>
+
+    <body>
+
+        <h1>Productos</h1>
+
+        <p>Ingresar número de ID para visualizar un producto, dejar en blanco para lista completa.</p>
+
+        <form method="GET" name="byID" action="/cgi-bin/mf.cgi">
+            <input type="number" name="param" placeholder="ID de producto">
+            <input type="submit" value="Buscar" onClick="paramHandler();">
+        </form>
+
+        <h2>Registrar nuevo producto</h2>
+        <form method="POST" action="http://localhost:8080/api/productos/" >
+            <input type="text" name="title" placeholder="Título" required><br><br>
+            <input type="number" name="price" placeholder="Precio" required><br><br>
+            <input type="text" name="thumbnail" placeholder="Foto (url)"><br><br>
+            <button type="submit">Guardar</button>
+        </form>
+
+        <p>Para actualizar o eliminar productos, utilizar <a href="https://www.postman.com">Postman</a> o similares.</p>
+
+        <script> 
+            function paramHandler() {
+                document.byID.action = '/api/productos/' + document.byID.param.value;
+            }
+        </script>
+        
+    </body>
+</html>
