@@ -1,0 +1,134 @@
+doctype html
+html 
+    head
+        title="App con pug"
+    body
+        case form
+            when true
+                div(class="formDiv")
+                    
+                    button(onclick="location.href = 'http://localhost:8080/productos/'" class="submit")="Ver todos los productos"
+                    h2="Registrar nuevo producto"
+                    form(method="POST" action="http://localhost:8080/productos/")
+                        input(type="text" name="title" placeholder="Título" required)
+                        input(type="number" name="price" placeholder="Precio" required)
+                        input(type="text" name="thumbnail" placeholder="Foto (url)")
+                        button(type="submit" class="submit")="Registrar"
+
+            when false
+                h1(style="text-align:center")="Pug-Productos"
+                
+                div(class="row")
+
+                    if products
+                        each product in products
+                            div(class="column")
+                                div(class="card")
+                                    img(src=product["thumbnail"] || "https://i.ibb.co/6nDS7nX/goose.jpg" style="width:100%")
+                                    h2=product["title"]
+                                    h3(class="price")="$" + product["price"]
+
+                    div(class="column")
+                        a(href="http://localhost:8080/")
+                            div(class="add")
+                                img(src="https://i.ibb.co/6nDS7nX/goose.jpg" style="width:100%")
+                                h2="Añade un nuevo producto"
+                                h3(class="price")="Ir al formulario"
+                        
+
+
+                
+
+//- ///////////////////// ESTILOS /////////////////////
+style(type="text/css").
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .column {
+        float: left;
+        width: 20%;
+        padding: 0 10px;
+    }
+
+    .row {
+        margin: 15px -5px;
+    }
+
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    @media screen and (max-width: 600px) {
+        .column {
+            width: 100%;
+            display: block;
+            margin-bottom: 20px;
+        }
+    }
+
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        padding: 16px;
+        text-align: center;
+        background-color: #f1f1f1;
+    }
+
+    .price {
+        color: grey;
+        font-size: 22px;
+    }
+
+    .card:hover {
+        opacity: 0.7;
+    }
+
+    .add {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        padding: 16px;
+        text-align: center;
+        background-color: #000;
+        color: white;
+    }
+
+    input {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    .submit {
+        border: none;
+        outline: 0;
+        padding: 12px;
+        color: white;
+        background-color: #000;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .submit:hover {
+        opacity: 0.7;
+    }
+
+    .formDiv {
+        border-radius: 5px;
+        text-align: center;
+        background-color: #f2f2f2;
+        padding: 10%;
+        margin: 0% 20% 0% 20%
+        
+    }
+
