@@ -1,0 +1,151 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+.main {
+    width: 50%
+}
+
+.products {
+    background-color: #f2f2f2;
+    width: 50%;
+    text-align: center;
+}
+
+#cardRow {
+    margin: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: scroll;
+    height: 820px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+    width: 25%;
+    margin: 1%
+}
+
+.price {
+    color: grey;
+    font-size: 22px;
+}
+
+.card:hover {
+    opacity: 0.7;
+}
+
+.formBox {
+    border-radius: 5px;
+    text-align: center;
+    background-color: #f2f2f2;
+    padding: 4%;
+    margin: 1%;
+    height: 380px;
+}
+
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.submit {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+.submit:hover {
+    opacity: 0.7;
+}
+
+.chatBox {
+    border-radius: 5px;
+    background-color: rgb(41, 41, 41);
+    height: 425px;
+    margin: 1%;
+    padding: 0.5%;
+    overflow: hidden;
+}
+
+#chat-messages {
+    height: 200px;
+    overflow-y: scroll;
+    overflow-wrap: break-word;
+    list-style-type: none;
+    padding: 0% 5%;
+}
+
+#chat > hr {
+    border: 0.5px dashed rgba(189, 184, 184, 0.596);
+}
+
+#chat > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+#chat > input {
+    width: 80%;
+    margin: 8px 10%;
+}
+
+#compresion {
+    color: white;
+    margin: 8px 5%;
+}
+
+.chatDiv > input {
+    width: 80%;
+    margin: 8px 1% 8px 5%;
+}
+
+.chatDiv > .submit {
+    width: 20%;
+    margin: 8px 5% 8px 1%;
+}
+
+.chatForm > input {
+    margin: 5px 1% 1px 1%;
+}
+
+
+@media screen and (max-width: 600px) {
+    body {
+        display: block;
+    }
+
+    .main, .products{
+        padding: 0px;
+        width: 100%;
+        background-color: white
+    }
+
+    #cardRow {
+        margin: 15px;
+        display: block;
+    }
+
+    .card {
+        width: 90%;
+    }
+    
+}
