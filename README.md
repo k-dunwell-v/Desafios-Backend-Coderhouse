@@ -9,3 +9,6 @@ Después de haber utilizado tres motores de plantillas diferentes para llevar a 
 
 ## 7-BaseDeDatos
 En la carpeta "coder" ya está creada una tabla que contiene más de 10 productos. Para usar, poner en la ruta "\xampp\mysql\data".
+
+## 8-MongoDB
+La carpeta "db" debe ir en la ruta C:\data. 
