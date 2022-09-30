@@ -73,12 +73,20 @@ const deleteProduct = async (req, res = response) => {
 
 const logged = (req, res, next) => {
     const log = req.signedCookies.logged
+    const ses = req.session.user
 
-    if (log) {
+    if (log === ses) {
         res.cookie('logged', log, {signed:true, maxAge:60000})
         next()
-    } else {
-        res.render("index", {logged:true});
+
+    }else{
+        req.session.regenerate((err) => {
+            if (err) {
+                return res.json({success:'false', error:err})
+            }else{
+                res.render("index", {logged:true});
+            }
+        })
     }
 }
 

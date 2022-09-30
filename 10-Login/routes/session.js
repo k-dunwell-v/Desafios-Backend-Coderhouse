@@ -5,7 +5,7 @@ router.post("/login", async (req, res) => {
     const { username, password } = req.body
     
     req.session.user = username
-    
+
     res.cookie('logged', username, {signed:true, maxAge:60000})
     
     res.redirect('back')

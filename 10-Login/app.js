@@ -22,6 +22,8 @@ app.use(session({
     secret: process.env.SESSION_SECRET || 'IFnB2Q7hfqqI3w7H',
     resave: true,
     saveUninitialized: true,
+    rolling: true,
+    cookie: { maxAge: 600000 },
     store: mongoStore.create({mongoUrl:'mongodb+srv://keith:yAk4wvBuSoPI5zO4@cluster0.ijmkqg9.mongodb.net/?retryWrites=true&w=majority', mongoOptions:{useNewUrlParser:true, useUnifiedTopology: true}})
 
 }))
