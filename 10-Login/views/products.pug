@@ -1,8 +1,11 @@
 div(class="products")
 
     if form
+        h1(style="color:black")= `Hey, ${username}`
+
         a(href="http://localhost:8080/api/session/logout")
-            h1(style="color:black")="Productos"
+            span Desconectarse 
+            
             
     else
         a(href="http://localhost:8080/api/")

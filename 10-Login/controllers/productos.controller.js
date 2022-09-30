@@ -4,7 +4,8 @@ const ProductosDaosFirebase = require('../daos/ProductosDaosFirebase')
 const db = new ProductosDaosFirebase()
 
 const getDefault = async (req, res = response) => {
-    res.render("index", {form:true})
+    const username = req.signedCookies.logged
+    res.render("index", {form:true, username:username})
 }
 
 const getProducts = async (req, res = response) => {
@@ -75,19 +76,20 @@ const logged = (req, res, next) => {
     const log = req.signedCookies.logged
     const ses = req.session.user
 
-    if (log === ses) {
+    if (log && log === ses) {
         res.cookie('logged', log, {signed:true, maxAge:60000})
         next()
-
-    }else{
-        req.session.regenerate((err) => {
-            if (err) {
-                return res.json({success:'false', error:err})
-            }else{
-                res.render("index", {logged:true});
-            }
-        })
+        
     }
+
+    req.session.regenerate((err) => {
+        if (err) {
+            return res.json({success:'false', error:err})
+        }else{
+            res.render("index", {logged:true});
+        }
+    })
+    
 }
 
 module.exports = {
