@@ -1,0 +1,53 @@
+div(class="products")
+
+    if form
+        h1(style="color:black")= `Hey, ${username}`
+
+        a(href="http://localhost:8080/api/session/logout")
+            span Desconectarse 
+            
+            
+    else
+        a(href="http://localhost:8080/api/")
+            h1(style="color:black")="Registrar nuevo producto"
+    
+    
+    div(id="cardRow")
+
+        if products
+            each product in products
+                div(class="card")
+                    img(src=product["thumbnail"] || "https://i.ibb.co/6nDS7nX/goose.jpg" style="width:100%")
+                    h2=product["title"]
+                    h3(class="price")="$" + product["price"]
+
+
+if !form
+    style(type="text/css").
+        
+        .products {
+            background-color: transparent;
+            width: 100%;
+        }
+        
+        .card {
+            width: 15%;
+        }
+
+        #cardRow {
+            overflow: hidden;
+            height: 100%;
+        }
+        
+        @media screen and (max-width: 600px) {
+
+            #cardRow {
+                margin: 15px;
+                display: block;
+            }
+
+            .card {
+                width: 90%;
+            }
+            
+        }
