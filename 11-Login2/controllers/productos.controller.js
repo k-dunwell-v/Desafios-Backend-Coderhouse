@@ -1,10 +1,10 @@
 const { response } = require('express')
-const ProductosDaosFirebase = require('../daos/ProductosDaosFirebase')
+const ProductosDaos = require('../daos/ProductosDaos')
 
-const db = new ProductosDaosFirebase()
+const db = new ProductosDaos()
 
 const getDefault = async (req, res = response) => {
-    const username = req.signedCookies.logged
+    const username = req.user['username']
     res.render("index", {form:true, username:username})
 }
 
@@ -16,7 +16,7 @@ const getProducts = async (req, res = response) => {
         if (id) {
             res.json({success:true, product:products} || {success:false, err:"ID no existe."})
         }else{
-            res.render("index", {form:false, products:products})
+            res.render("index", {form:false, products:products, username:username})
         }
 
     }).catch((err) => {
@@ -72,60 +72,10 @@ const deleteProduct = async (req, res = response) => {
     })
 }
 
-
-///////////////////////////////////////////////////
-
-const passport = require('passport')
-const LocalStrategy = require('passport-local').Strategy
-const bcrypt = require('bcrypt')
-
-passport.use('login', new LocalStrategy(
-    (username, password, done) => {
-        if (err) { 
-            return done(err)
-        }
-
-        if (!user) {
-            console.log('NO')
-            return done(null, false)
-        }
-
-        if (!isValidPassword(user, password)) {
-            console.log('NO')
-            return done(null, false)
-        }
-
-        return done(null, user)
-    }
-))
-
-const logged = (req, res, next) => {
-    const log = req.signedCookies.logged
-    const ses = req.session.user
-
-    if (log && log === ses) {
-        res.cookie('logged', log, {signed:true, maxAge:60000})
-        next()
-        
-    }
-
-    req.session.regenerate((err) => {
-        if (err) {
-            return res.json({success:'false', error:err})
-        }else{
-            res.render("index", {logged:true});
-        }
-    })
-    
-}
-
-///////////////////////////////////////////////////
-
 module.exports = {
     getDefault,
     getProducts,
     postProduct,
     putProduct,
-    deleteProduct,
-    logged
+    deleteProduct
 }

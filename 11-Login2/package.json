@@ -9,7 +9,7 @@
     "dotenv": "^16.0.3",
     "express": "^4.18.1",
     "express-session": "^1.17.3",
-    "firebase-admin": "^11.0.1",
+    "mongoose": "^6.6.5",
     "morgan": "^1.10.0",
     "normalizr": "^3.6.2",
     "passport": "^0.6.0",

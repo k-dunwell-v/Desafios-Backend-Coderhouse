@@ -20,35 +20,35 @@ socket.on('connection', (data) => {
             })
             break;
 
-        case "chat":
+        // case "chat":
 
-            const authorSchema = new schema.Entity('authors')
+        //     const authorSchema = new schema.Entity('authors')
 
-            const messageSchema = new schema.Entity('messages', {
-                author: authorSchema,
-            })
+        //     const messageSchema = new schema.Entity('messages', {
+        //         author: authorSchema,
+        //     })
     
-            const chatSchema = new schema.Entity('chat', {
-                messages: [messageSchema]
-            })
+        //     const chatSchema = new schema.Entity('chat', {
+        //         messages: [messageSchema]
+        //     })
 
-            const chat = denormalize(data.chat['result'], chatSchema, data.chat['entities'])
+        //     const chat = denormalize(data.chat['result'], chatSchema, data.chat['entities'])
         
-            $('#chat-messages').empty()
+        //     $('#chat-messages').empty()
             
-            const compresion = (1 - (JSON.stringify(chat).length / JSON.stringify(data['chat']).length)) * 100
+        //     const compresion = (1 - (JSON.stringify(chat).length / JSON.stringify(data['chat']).length)) * 100
 
-            $('#compresion').text(`↳ Porcentaje de compresión: ${Math.floor(compresion)}%`)
+        //     $('#compresion').text(`↳ Porcentaje de compresión: ${Math.floor(compresion)}%`)
 
-            $('#chat-messages').empty()
-            chat["messages"].map( (message) => {
-                $('#chat-messages').append($('<li>').html(`<span style="color: ${randomColor({luminosity: 'light'})}">
-                    <img src=${message["author"].avatar || "https://i.im.ge/2022/09/23/1hVLEc.Goose.png"} style="width:25px;height:25px;border-radius:50%">
-                    ${message["author"].alias}: 
-                    <b>${message["text"]}</b>
-                    </span>`))
-            })
-            break;
+        //     $('#chat-messages').empty()
+        //     chat["messages"].map( (message) => {
+        //         $('#chat-messages').append($('<li>').html(`<span style="color: ${randomColor({luminosity: 'light'})}">
+        //             <img src=${message["author"].avatar || "https://i.im.ge/2022/09/23/1hVLEc.Goose.png"} style="width:25px;height:25px;border-radius:50%">
+        //             ${message["author"].alias}: 
+        //             <b>${message["text"]}</b>
+        //             </span>`))
+        //     })
+        //     break;
     }
 
 })

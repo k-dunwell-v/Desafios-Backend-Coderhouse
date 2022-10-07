@@ -9,8 +9,27 @@ html
         script(src="https://cdn.jsdelivr.net/npm/normalizr@3.6.1/dist/normalizr.browser.min.js")
 
     body 
-        case !logged
-            when true 
+        case username
+
+            when undefined
+                div(class='log')
+                    form(method="POST" action="http://localhost:8080/api/login")
+                        input(type="text" name="username" placeholder="Usuario" required)
+                        input(type="text" name="password" placeholder="Contraseña" required)
+                        div(class="logDiv")
+                            input(type="button" class="button" onclick="location.href='http://localhost:8080/api/signup';" value="No tengo usuario")
+                            input(type="submit" class="submit" value="Entrar")
+            
+            when 'wip'
+                div(class='log')
+                    form(method="POST" action="http://localhost:8080/api/signup")
+                        input(type="text" name="username" placeholder="Nuevo usuario" required)
+                        input(type="text" name="password" placeholder="Nueva contraseña" required)
+                        div(class="logDiv")
+                            input(type="button" class="button" onclick="location.href='http://localhost:8080/api/login';" value="Tengo un usuario")
+                            input(type="submit" class="submit" value="Registrarse")
+
+            default
                 div(class="main")
                     if form
                         div(style="width:50%")
@@ -53,13 +72,5 @@ html
 
                     include ../views/products.pug
 
-            default
-                div(class='log')
-                    form(method="POST" action="http://localhost:8080/api/session/login")
-                        input(type="text" name="username" placeholder="Usuario" required)
-                        input(type="text" name="password" placeholder="Contraseña" required)
-                        input(type="submit" class="submit" value="Entrar")
-
         script
             include ../public/script.js
-            include ../public/log.js
