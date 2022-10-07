@@ -170,7 +170,7 @@ app.get('/api/logout', (req, res, next) => {
 const productsRouter = require('./routes/Productos')
 const testRouter = require('./routes/Test')
 
-app.use("/api/", productsRouter)
+app.use("/api/", checkAuth, productsRouter)
 app.use("/api/", testRouter)
 
 
