@@ -12,6 +12,3 @@ En la carpeta "coder" ya está creada una tabla que contiene más de 10 producto
 
 ## 8-MongoDB
 La carpeta "db" debe ir en la ruta C:\data. 
-
-## 14-Loggers
-Informe --> https://docs.google.com/document/d/1RSDls3aUvDExc9b525u64R1MAdsGWaaLusD4RUPoAFc/edit?usp=sharing

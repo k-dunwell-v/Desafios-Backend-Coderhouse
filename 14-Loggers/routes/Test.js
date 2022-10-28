@@ -44,7 +44,7 @@ router.get('/info', (req, res) => {
 router.get('/infolog', (req, res) => {
     const os = require("os")
 
-    const info = {
+    console.log({
         argumentosDeEntrada: process.argv.slice(2),
         plataforma: process.platform,
         versionNode: process.versions['node'],
@@ -53,11 +53,18 @@ router.get('/infolog', (req, res) => {
         processID: process.pid,
         carpetaProyecto: process.cwd(),
         Procesadores: os.cpus().length
-    }
+    })
 
-    console.log(info)
-
-    res.json(info)
+    res.json({
+        argumentosDeEntrada: process.argv.slice(2),
+        plataforma: process.platform,
+        versionNode: process.versions['node'],
+        memoriaTotalReservada: process.memoryUsage()['rss'],
+        exPath: process.argv[1],
+        processID: process.pid,
+        carpetaProyecto: process.cwd(),
+        Procesadores: os.cpus().length
+    })
 
     //artillery quick --count 50 -n 50 http://localhost:8080/api/info > 14-Loggers/profiling/result_log.txt
     // node --prof-process 14-Loggers/profiling/log-v8.log > 14-Loggers/profiling/result_log.txt

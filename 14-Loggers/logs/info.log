@@ -1,71 +1,3 @@
-{"level":"warn","message":"Ruta /api/desd con método GET no implementada"}
-{"level":"warn","message":"Ruta /api/desd con método GET no implementada"}
-{"level":"warn","message":"Ruta /api/desd con método GET no implementada"}
-{"level":"info","message":"Server running on port 8080, mode: FORK"}
-{"level":"info","message":"Server running on port 8080, mode: FORK"}
-{"level":"info","message":"Server running on port 8080, mode: FORK"}
-{"level":"info","message":"Server running on port 8080, mode: FORK"}
-{"level":"info","message":"Server running on port 8080, mode: FORK"}
-{"level":"info","message":"Server running on port 8080, mode: FORK"}
-{"level":"warn","message":"Ruta /api/desd con método GET no implementada"}
-{"level":"warn","message":"Ruta /api/ con método GET no implementada"}
-{"level":"info","message":"Server running on port 8080, mode: FORK"}
-{"level":"info","message":"Server running on port 8080, mode: FORK"}
-{"level":"info","message":"Unknown bunny connected"}
-{"level":"info","message":"Server running on port 8080, mode: FORK"}
-{"level":"info","message":"Server running on port 8080, mode: FORK"}
-{"level":"info","message":"Server running on port 8080, mode: FORK"}
-{"level":"warn","message":"Ruta /favicon.ico con método GET no implementada"}
-{"level":"info","message":"Unknown bunny connected"}
-{"level":"info","message":"Server running on port 8080, mode: FORK"}
-{"level":"info","message":"Server running on port 8080, mode: FORK"}
-{"level":"info","message":"Server running on port 8080, mode: FORK"}
-{"level":"info","message":"Server running on port 8080, mode: FORK"}
-{"level":"warn","message":"Ruta /favicon.ico con método GET no implementada"}
-{"level":"info","message":"Server running on port 8080, mode: FORK"}
-{"level":"info","message":"GET /randoms"}
-{"level":"info","message":"Server running on port 8080, mode: FORK"}
-{"level":"info","message":"1666922265979 GET /randoms"}
-{"level":"info","message":"Server running on port 8080, mode: FORK"}
-{"level":"info","message":"[27/9/2022 20:59:22] GET /randoms"}
-{"level":"info","message":"Server running on port 8080, mode: FORK"}
-{"level":"info","message":"Server running on port 8080, mode: FORK"}
-{"level":"info","message":"Server running on port 8080, mode: FORK"}
-{"level":"info","message":"Server running on port 8080, mode: FORK"}
-{"level":"info","message":"Server running on port 8080, mode: FORK"}
-{"level":"info","message":"Server running on port 8080, mode: FORK"}
-{"level":"info","message":"[27/9/2022 21:3:14]"}
-{"level":"info","message":"Server running on port 8080, mode: FORK"}
-{"level":"info","message":"Server running on port 8080, mode: FORK"}
-{"level":"info","message":"Server running on port 8080, mode: FORK"}
-{"level":"info"}
-{"level":"info","message":"Server running on port 8080, mode: FORK"}
-{"level":"info","message":"GET"}
-{"level":"info","message":"Server running on port 8080, mode: FORK"}
-{"level":"info","message":"GET"}
-{"level":"warn","message":"Ruta /randoms?cant=4 con método GET no implementada"}
-{"level":"info","message":"Server running on port 8080, mode: FORK"}
-{"level":"info","message":"GET"}
-{"level":"info","message":"Ruta /randoms?cant=4 con método GET no implementada"}
-{"level":"info","message":"Server running on port 8080, mode: FORK"}
-{"level":"info","message":"function getDate() {\r\n    const d = new Date()\r\n    const date = `[${d.getDate()}/${d.getMonth()}/${d.getFullYear()} ${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}]`\r\n    return date\r\n} GET /randoms?cant=4"}
-{"level":"info","message":"Server running on port 8080, mode: FORK"}
-{"level":"info","message":"[27/9/2022 21:6:30] GET /randoms?cant=4"}
-{"level":"info","message":"Server running on port 8080, mode: FORK"}
-{"level":"info","message":"Server running on port 8080, mode: FORK"}
-{"level":"info","message":"Server running on port 8080, mode: FORK"}
-{"level":"info","message":"Server running on port 8080, mode: FORK"}
-{"level":"info","message":"Server running on port 8080, mode: FORK"}
-{"level":"info","message":"[27/9/2022 21:11:0] GET /api/randoms?cant=4"}
-{"level":"info","message":"Server running on port 8080, mode: FORK"}
-{"level":"info","message":"[27/9/2022 21:11:44] GET /favicon.ico"}
-{"level":"warn","message":"Ruta /favicon.ico con método GET no implementada"}
-{"level":"info","message":"[27/9/2022 21:11:46] GET /api/"}
-{"level":"info","message":"Unknown bunny connected"}
-{"level":"info","message":"Server running on port 8080, mode: FORK"}
-{"level":"info","message":"Server running on port 8080, mode: FORK"}
-{"level":"info","message":"[27/9/2022 21:12:30] GET /favicon.ico"}
-{"level":"warn","message":"Ruta /favicon.ico con método GET no implementada"}
 {"level":"info","message":"[27/9/2022 21:12:36] GET /api/"}
 {"level":"info","message":"[27/9/2022 21:12:36] Unknown bunny connected"}
 {"level":"info","message":"Server running on port 8080, mode: FORK"}
@@ -316,4 +248,21 @@
 {"level":"info","message":"[28/9/2022 1:10:2] GET /api/randoms?cant=2"}
 {"level":"info","message":"Server running on port 8080, mode: FORK"}
 {"level":"info","message":"[28/9/2022 1:15:23] GET /api/info"}
+{"level":"info","message":"Server running on port 8080, mode: FORK"}
+{"level":"info","message":"[28/9/2022 1:23:50] GET /api/"}
+{"level":"info","message":"Server running on port 8080, mode: FORK"}
+{"level":"info","message":"Server running on port 8080, mode: FORK"}
+{"level":"info","message":"Server running on port 8080, mode: FORK"}
+{"level":"info","message":"[28/9/2022 17:25:23] Unknown bunny connected"}
+{"level":"info","message":"[28/9/2022 17:25:29] GET /api/"}
+{"level":"info","message":"[28/9/2022 17:25:29] Unknown bunny connected"}
+{"level":"info","message":"[28/9/2022 17:25:33] GET /api/info"}
+{"level":"info","message":"[28/9/2022 17:25:45] GET /api/infolog"}
+{"level":"info","message":"Server running on port 8080, mode: FORK"}
+{"level":"info","message":"[28/9/2022 17:29:47] GET /api/infolog"}
+{"level":"info","message":"Server running on port 8080, mode: FORK"}
+{"level":"info","message":"[28/9/2022 17:30:18] GET /api/info"}
+{"level":"info","message":"[28/9/2022 17:30:18] GET /api/info"}
+{"level":"info","message":"Server running on port 8080, mode: FORK"}
+{"level":"info","message":"Server running on port 8080, mode: FORK"}
 {"level":"info","message":"Server running on port 8080, mode: FORK"}
