@@ -316,3 +316,4 @@
 {"level":"info","message":"[28/9/2022 1:10:2] GET /api/randoms?cant=2"}
 {"level":"info","message":"Server running on port 8080, mode: FORK"}
 {"level":"info","message":"[28/9/2022 1:15:23] GET /api/info"}
+{"level":"info","message":"Server running on port 8080, mode: FORK"}
