@@ -1,6 +1,6 @@
 const { response } = require('express')
-const ProductosDaos = require('../daos/ProductosDaos')
-const { logger } = require('../logs/logger')
+const ProductosDaos = require('../service/ProductosDaos')
+const { logger } = require('../../logs/logger')
 
 const db = new ProductosDaos()
 
@@ -11,8 +11,7 @@ const getDefault = async (req, res = response) => {
 
 const getProducts = async (req, res = response) => {
     const { id } = req.params
-    const username = req.user['username']
-    
+
     db.get(id).then((products) => {
 
         if (id) {

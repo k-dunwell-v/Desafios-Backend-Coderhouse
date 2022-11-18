@@ -11,11 +11,11 @@ require('dotenv').config()
 const compression = require('compression')
 
 app.set("view engine", "pug")
-app.set("views", "./views")
+app.set("views", "./src/views")
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
-app.use(express.static("public"))
+app.use(express.static('./public'))
 app.use(compression())
 
 app.use(cookieParser(process.env.COOKIES_SECRET))
@@ -46,7 +46,7 @@ app.use(passport.session())
 
 /////////// utils /////////
 
-const userModel = require('./DB/usuarios.model')
+const userModel = require('./models/usuarios.model')
 
 const isValidePassword = (user, password) => {
     return bcrypt.compareSync(password, user.password)
@@ -168,7 +168,7 @@ app.get('/api/logout', (req, res, next) => {
 // const morganLogger = require('morgan')
 // app.use(morganLogger('dev'))
 
-const { logger, getDate } = require('./logs/logger')
+const { logger, getDate } = require('../logs/logger')
 
 app.use((req, res, next) => {
     const { method, url } = req.socket['parser'].incoming
@@ -177,11 +177,9 @@ app.use((req, res, next) => {
 })
 
 const productsRouter = require('./routes/Productos')
-const testRouter = require('./routes/Test')
 const randomsRouter = require('./routes/Randoms')
 
 app.use("/api/", checkAuth, productsRouter)
-app.use("/api/", testRouter)
 app.use("/api/", randomsRouter)
 
 app.use((req, res) => {
@@ -195,7 +193,7 @@ app.use((req, res) => {
 ////////////////////////CLIENTE///////////////////////
 //////////////////////////////////////////////////////
 
-const ProductosDaos = require('./daos/ProductosDaos')
+const ProductosDaos = require('./service/ProductosDaos')
 const db = new ProductosDaos()
 
 // const ChatDaosFirebase = require('./daos/ChatDaosFirebase')
