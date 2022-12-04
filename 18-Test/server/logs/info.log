@@ -623,3 +623,21 @@
 {"level":"info","message":"[3/11/2022 20:23:44] GET /api/"}
 {"level":"info","message":"[3/11/2022 20:23:44] GET /api/"}
 {"level":"info","message":"Server running on port 8080, mode: FORK"}
+{"level":"info","message":"Server running on port 8080, mode: FORK"}
+{"level":"info","message":"[3/11/2022 21:10:16] GET /api/"}
+{"level":"info","message":"[3/11/2022 21:10:16] GET /api/"}
+{"level":"info","message":"[3/11/2022 21:11:37] GET /api/"}
+{"level":"info","message":"[3/11/2022 21:11:37] GET /api/"}
+{"level":"info","message":"[3/11/2022 21:14:37] GET /api/"}
+{"level":"info","message":"[3/11/2022 21:14:37] GET /api/"}
+{"level":"info","message":"[3/11/2022 21:15:53] POST /api/productos"}
+{"level":"info","message":"[3/11/2022 21:15:57] GET /api/"}
+{"level":"info","message":"[3/11/2022 21:15:57] GET /api/"}
+{"level":"info","message":"[3/11/2022 21:16:12] PUT /api/productos/638c02d9371d97fbd9d35e4d"}
+{"level":"info","message":"[3/11/2022 21:16:14] GET /api/"}
+{"level":"info","message":"[3/11/2022 21:16:14] GET /api/"}
+{"level":"info","message":"[3/11/2022 21:16:16] DELETE /api/productos/638c02d9371d97fbd9d35e4d"}
+{"level":"info","message":"[3/11/2022 21:16:17] GET /api/"}
+{"level":"info","message":"[3/11/2022 21:16:17] GET /api/"}
+{"level":"info","message":"[3/11/2022 21:17:10] GET /api/"}
+{"level":"info","message":"[3/11/2022 21:17:10] GET /api/"}
