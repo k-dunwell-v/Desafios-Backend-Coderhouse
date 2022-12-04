@@ -269,3 +269,10 @@
 {"level":"info","message":"Server running on port 8080, mode: FORK"}
 {"level":"info","message":"Server running on port 8080, mode: FORK"}
 {"level":"info","message":"Server running on port 8080, mode: FORK"}
+{"level":"info","message":"Server running on port 8080, mode: FORK"}
+{"level":"info","message":"[2/11/2022 18:36:8] GET /favicon.ico"}
+{"level":"warn","message":"Ruta /favicon.ico con método GET no implementada"}
+{"level":"info","message":"[2/11/2022 18:36:9] GET /api/"}
+{"level":"info","message":"[2/11/2022 18:36:10] Unknown bunny connected"}
+{"level":"info","message":"[2/11/2022 18:36:25] GET /api/characters"}
+{"level":"warn","message":"Ruta /api/characters con método GET no implementada"}

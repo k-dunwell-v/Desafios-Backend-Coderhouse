@@ -10,3 +10,5 @@
 {"level":"warn","message":"Ruta /favicon.ico con método GET no implementada"}
 {"level":"warn","message":"Ruta /favicon.ico con método GET no implementada"}
 {"level":"warn","message":"Ruta /favicon.ico con método GET no implementada"}
+{"level":"warn","message":"Ruta /favicon.ico con método GET no implementada"}
+{"level":"warn","message":"Ruta /api/characters con método GET no implementada"}
