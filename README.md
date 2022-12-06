@@ -15,3 +15,8 @@ La carpeta "db" debe ir en la ruta C:\data.
 
 ## 15-Heroku
 Link a servidor --> https://coder-backend-keith.herokuapp.com/api/
+
+## 18-Test
+Para iniciar servidor --> Desde la carpeta server, npm start
+Para iniciar cliente --> Desde la carpeta client, npm start
+Para realizar test con mocha, chai y supertest --> Desde la carpeta server, npm run test

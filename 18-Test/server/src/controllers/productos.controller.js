@@ -35,7 +35,7 @@ const getProducts = async (req, res = response) => {
 }
 
 const postProduct = async (req, res = response) => {
-
+    
     const {title, price, thumbnail, detail, stock } = req.body
 
     const product = {

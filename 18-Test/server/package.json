@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "start": "nodemon ./src/server.js"
+    "start": "nodemon ./src/server.js",
+    "test": "mocha test/*.test.js"
   },
   "dependencies": {
     "autocannon": "^7.10.0",
@@ -26,6 +27,9 @@
     "yargs": "^17.6.0"
   },
   "devDependencies": {
-    "@faker-js/faker": "^7.5.0"
+    "@faker-js/faker": "^7.5.0",
+    "chai": "^4.3.7",
+    "mocha": "^10.1.0",
+    "supertest": "^6.3.2"
   }
 }

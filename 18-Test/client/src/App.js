@@ -28,6 +28,8 @@ function App() {
   	return (
 		<div className="main">
 
+			
+
 			{form &&
 				<div style={{width: 'width:50%'}}>
 					<div className="formBox">

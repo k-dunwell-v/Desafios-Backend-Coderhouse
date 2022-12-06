@@ -1,2 +1,4 @@
 {"level":"error"}
 {"kind":"ObjectId","message":"Cast to ObjectId failed for value \"undefined\" (type string) at path \"_id\" for model \"productos\"","name":"CastError","path":"_id","reason":{},"stringValue":"\"undefined\"","value":"undefined","valueType":"string"}
+{"kind":"ObjectId","message":"Cast to ObjectId failed for value \"123test\" (type string) at path \"_id\" for model \"productos\"","name":"CastError","path":"_id","reason":{},"stringValue":"\"123test\"","value":"123test","valueType":"string"}
+{"kind":"ObjectId","message":"Cast to ObjectId failed for value \"123test\" (type string) at path \"_id\" for model \"productos\"","name":"CastError","path":"_id","reason":{},"stringValue":"\"123test\"","value":"123test","valueType":"string"}
