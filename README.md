@@ -1,5 +1,8 @@
 # Desafios-Backend-Coderhouse
+## Desafios-Backend-Coderhouse
 Cada carpeta contiene el presentable para cada desafío.
+
+[TOCM]
 
 ## 3-ServidorExpress
 Link a Glitch --> https://nettle-private-countess.glitch.me
@@ -17,14 +20,14 @@ La carpeta "db" debe ir en la ruta C:\data.
 Link a servidor --> https://coder-backend-keith.herokuapp.com/api/
 
 ## 18-Test
-Para iniciar servidor --> Desde la carpeta server, npm start<br/>
-Para iniciar cliente --> Desde la carpeta client, npm start<br/>
-Para realizar test con mocha, chai y supertest --> Desde la carpeta server, npm run test<br/>
+Para iniciar servidor --> Desde la carpeta server, `$ npm start`<br/>
+Para iniciar cliente --> Desde la carpeta client, `$ npm start`<br/>
+Para realizar test con mocha, chai y supertest --> Desde la carpeta server, `$ npm run test`<br/>
 
 ## 19-GRAPHQL
-Iniciar servidor con "npm start" e ir a --> http://localhost:8080/graphql
+Iniciar servidor con `$ npm start` e ir a --> http://localhost:8080/graphql
 
-### Comandos para GRAPHQL
+### Comandos
 query {
     getProducts {
         _id
