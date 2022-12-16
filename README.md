@@ -1,8 +1,5 @@
 # Desafios-Backend-Coderhouse
-## Desafios-Backend-Coderhouse
 Cada carpeta contiene el presentable para cada desafío.
-
-[TOCM]
 
 ## 3-ServidorExpress
 Link a Glitch --> https://nettle-private-countess.glitch.me
