@@ -25,7 +25,7 @@ Para realizar test con mocha, chai y supertest --> Desde la carpeta server, `$ n
 Iniciar servidor con `$ npm start` e ir a --> http://localhost:8080/graphql
 
 ### Comandos
-query {
+- query {
     getProducts {
         _id
         title
@@ -36,7 +36,7 @@ query {
     }
 }
 
-query {
+- query {
 	getProductById(_id:"633f6f1317b4338f2bbdaff5") {
         _id
         title
@@ -47,7 +47,7 @@ query {
 	}
 }
 
-mutation {
+- mutation {
     postProduct (
         title: "Goose"
         thumbnail: ""
@@ -57,7 +57,7 @@ mutation {
     ) { _id }
 }
 
-mutation {
+- mutation {
     putProduct (
       	_id:"639bb5b8ff2ca3bb4b612eb4"
         title: "GooseEditado"
@@ -68,7 +68,7 @@ mutation {
     ) { title, thumbnail, detail, price, stock }
 }
 
-mutation {
+- mutation {
     deleteProduct ( 
         _id:"639bb5b8ff2ca3bb4b612eb4" 
     ) { acknowledged, deletedCount }
