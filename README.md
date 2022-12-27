@@ -21,7 +21,7 @@ Para iniciar servidor --> Desde la carpeta server, `$ npm start`<br/>
 Para iniciar cliente --> Desde la carpeta client, `$ npm start`<br/>
 Para realizar test con mocha, chai y supertest --> Desde la carpeta server, `$ npm run test`<br/>
 
-## 19-GRAPHQL
+## 19-GRAPHQL & 20-KOA
 Iniciar servidor con `$ npm start` e ir a --> http://localhost:8080/graphql
 
 ### Comandos
