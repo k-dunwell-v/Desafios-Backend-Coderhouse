@@ -17,15 +17,15 @@ La carpeta "db" debe ir en la ruta C:\data.
 Link a servidor --> https://coder-backend-keith.herokuapp.com/api/
 
 ## 18-Test
-Para iniciar servidor --> Desde la carpeta server, npm start<br/>
-Para iniciar cliente --> Desde la carpeta client, npm start<br/>
-Para realizar test con mocha, chai y supertest --> Desde la carpeta server, npm run test<br/>
+Para iniciar servidor --> Desde la carpeta server, `$ npm start`<br/>
+Para iniciar cliente --> Desde la carpeta client, `$ npm start`<br/>
+Para realizar test con mocha, chai y supertest --> Desde la carpeta server, `$ npm run test`<br/>
 
 ## 19-GRAPHQL
-Iniciar servidor con "npm start" e ir a --> http://localhost:8080/graphql
+Iniciar servidor con `$ npm start` e ir a --> http://localhost:8080/graphql
 
-### Comandos para GRAPHQL
-query {
+### Comandos
+- query {
     getProducts {
         _id
         title
@@ -36,7 +36,7 @@ query {
     }
 }
 
-query {
+- query {
 	getProductById(_id:"633f6f1317b4338f2bbdaff5") {
         _id
         title
@@ -47,7 +47,7 @@ query {
 	}
 }
 
-mutation {
+- mutation {
     postProduct (
         title: "Goose"
         thumbnail: ""
@@ -57,7 +57,7 @@ mutation {
     ) { _id }
 }
 
-mutation {
+- mutation {
     putProduct (
       	_id:"639bb5b8ff2ca3bb4b612eb4"
         title: "GooseEditado"
@@ -68,7 +68,7 @@ mutation {
     ) { title, thumbnail, detail, price, stock }
 }
 
-mutation {
+- mutation {
     deleteProduct ( 
         _id:"639bb5b8ff2ca3bb4b612eb4" 
     ) { acknowledged, deletedCount }
