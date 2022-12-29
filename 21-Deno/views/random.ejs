@@ -1,0 +1,17 @@
+<body>
+    <h1>RANDOM</h1>
+    <form action="/" method="POST">
+      <input type="number" name="numero" placeholder="Número" required/>
+      <button type="submit">Enviar</button>
+    </form>
+    <table style="border: 1px solid black; font-size: 50px">
+        <% if(obj) {%> 
+            <% for (const prop in obj) { %>
+                <tr>
+                    <td style="background-color: rgb(229, 229, 229); border: 1px solid black"><%= prop %></td>
+                    <td style="background-color: rgb(191, 191, 191); border: 1px solid black"><%= obj[prop] %></td>
+                </tr>
+            <% } %>
+       <% } %>
+    </table>
+  </body> 
